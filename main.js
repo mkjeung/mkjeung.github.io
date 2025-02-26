@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const offset = 100; // Adjust this value to your desired offset
+    const offset = 150; // Adjust this value to your desired offset
     const links = document.querySelectorAll('a[href^="#"]');
 
     links.forEach(link => {
