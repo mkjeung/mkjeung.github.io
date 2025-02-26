@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Joan';
-    src: url('./Joan-Regular.ttf') format('truetype');
+    src: url('./fonts/Joan-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,16 +19,18 @@ body {
     align-items: center;
     background-color: #F8F9F1;
 }
+
 /*HEADER*/
 #header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 10px 20px;
     background-color: #F8F9F1;
     color: #fff;
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 100%;
     height: 100px;
     z-index: 1000;
 }
@@ -73,7 +75,6 @@ body {
     border-radius: 20px;
     margin-top:10px;
     margin-bottom:80px;
-    
 }
 
 #banner-image {
@@ -208,7 +209,8 @@ body {
 .about-image {
     width: 100%;
     object-fit: cover;
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);}
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
+}
 
 .overlay-image {
     position: absolute;
@@ -306,4 +308,140 @@ body {
     text-align: center;
     color:white;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+        height: 80px;
+    }
+
+    .banner {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    #banner-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .banner-content {
+        width: 100%;
+        height: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    #services-block {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .services-col {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #about-block {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-col-left, .about-col-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .image-container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .book {
+        width: 80%;
+    }
+
+    .book-text {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #contact {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .contact-text {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .banner-content {
+        font-size: 30px;
+    }
+
+    .services-title {
+        font-size: 25px;
+    }
+
+    .services-text {
+        font-size: 20px;
+    }
+
+    .about-text {
+        font-size: 20px;
+    }
+
+    .book-title {
+        font-size: 30px;
+    }
+
+    .book-big-text {
+        font-size: 25px;
+    }
+
+    .contact-text {
+        font-size: 20px;
+    }
 }
